@@ -1,0 +1,40 @@
+table{
+    width: 600px; /* Tyckte tabellen kändes liten så gjorde den något större */
+}
+
+th, td{
+    width: 25%; /*Gjorde alla kolumner och celler lika breda */
+}
+
+table, td, th{
+    border: 1px solid black; 
+    border-collapse: collapse;
+} /*Ger kantlinjer och collapse gör att det inte blir dubbla linjer*/
+
+th:nth-child(1) /*, td:nth-child(1)*/ {
+    text-align: left; /* Gör så all text i första kolumnen är aligned vänster, men allt i td var redan det automatiskt så tog bort det
+    men lämnade so kommentar för att minnas ändringen. */
+}
+
+td:nth-child(2), td:nth-child(3){
+    text-align: center; /* Gruppselektor som gör att texten i kolumn 2+3 är centrerad, har inte med rubrik-raden då den redan var centrerad.*/
+}
+
+th:nth-child(4), td:nth-child(4){
+    text-align: right; /* Gruppselektor så all text i fjärde kolumnen är aligned höger, här är både rubrikkcellen och datacellerna med då allt behövde justeras.*/
+}
+
+th{
+    background-color: rgb(89, 161, 89);
+}
+
+tr:nth-child(odd){
+    background-color: rgb(248, 201, 164); /* Gör varannan rad beige */
+
+}
+
+caption{
+    font-weight: bold;
+    padding: 2%; /* La till lite padding för att få rubriken lite längre ifrån tabellen, tycker det blev snyggare */
+    caption-side: bottom; /* Ändrar placeringen av rubriken*/
+} 
